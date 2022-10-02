@@ -8,10 +8,11 @@
             <div><b>Content: </b> {{comment.content}} </div>
         </div>
         <div>
-            <button class="btn btn-danger">Delete</button>
+            <my-button class="btn btn-danger">Delete</my-button>
         </div>
     </div>
 </template>
+
 
 <script>
 export default {
