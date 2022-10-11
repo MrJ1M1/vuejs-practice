@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="w-75 mx-auto">
+        <div class="w-100 mx-auto">
             <h1 class="text-warning">Add Infomation...</h1>
             <form @submit.prevent>
                 <my-input v-model="comment.firstname"

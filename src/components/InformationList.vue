@@ -1,12 +1,16 @@
 <template>
-    <div>
+    <div v-if="comments.length > 0">
         <h3 class="text-center text-info">Added Informations:</h3>
         <information-item 
             class="w-75 mx-auto comment_list" 
             :comment="comment" 
             v-for="comment in comments" 
             :key="comment.id"
+            @remove="$emit('remove', comment)"
         />
+    </div>
+    <div v-else>
+        <h2 class="text-center text-danger">We can not find any comment</h2>
     </div>
 </template>
 
@@ -26,8 +30,8 @@ export default {
 
 <style scoped>
     .comment_list{
-        border: 2px solid blueviolet;
-        padding: 15px;
-        margin: 15px;
+        border: 5px solid gray;
+        padding: 10px;
+        margin: 5px;
     }
 </style>

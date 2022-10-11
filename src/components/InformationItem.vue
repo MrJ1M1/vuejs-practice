@@ -1,14 +1,12 @@
 <template>
     <div class="comment_item">
         <div>
-            <div><b>FirstName: </b> {{comment.firstname}} </div>
-            <div><b>SurName: </b> {{comment.surname}} </div>
-            <div><b>EmailAddress: </b> {{comment.email}} </div>
-            <div><b>PhoneNumber: </b> {{comment.phone}} </div>
-            <div><b>Content: </b> {{comment.content}} </div>
+            <p>{{comment.firstname}} {{comment.surname}}</p>
+            <p><b>{{comment.email}}</b> {{comment.phone}}</p>
+            <p><b>Content: </b> {{comment.content}} </p>
         </div>
         <div>
-            <my-button class="btn btn-danger">Delete</my-button>
+            <my-button class="btn btn-danger" @click="$emit('remove', commit)">Delete</my-button>
         </div>
     </div>
 </template>
