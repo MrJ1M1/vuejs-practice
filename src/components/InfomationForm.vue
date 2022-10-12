@@ -3,27 +3,17 @@
         <div class="w-100 mx-auto">
             <h1 class="text-warning">Add Infomation...</h1>
             <form @submit.prevent>
-                <my-input v-model="comment.firstname"
+                <my-input v-model="comment.name"
                     class="form-control mb-3" 
                     type="text" 
-                    placeholder="Enter Your Firstname..."
-                />
-                <my-input v-model="comment.surname"
-                    class="form-control mb-3" 
-                    type="text" 
-                    placeholder="Enter Your Surname..."
+                    placeholder="Enter Your Name..."
                 />
                 <my-input v-model="comment.email"
                     class="form-control mb-3" 
                     type="email" 
                     placeholder="Enter Your Email Address..."
                 />
-                <my-input v-model="comment.phone"
-                    class="form-control mb-3" 
-                    type="number" 
-                    placeholder="Enter Your Phone Number..."
-                />
-                <my-input v-model="comment.content"
+                <my-input v-model="comment.body"
                     class="form-control mb-3" 
                     type="text" 
                     placeholder="Enter Your Content..."
@@ -41,11 +31,9 @@ export default {
     data() {
         return {
             comment:{
-                firstname: '',
-                surname: '',
+                name: '',
                 email: '',
-                phone: '',
-                content: ''
+                body: ''
             }
         }
     },
@@ -54,11 +42,9 @@ export default {
             this.comment.id = Date.now();
             this.$emit('addComment', this.comment);
             this.comment = { 
-                firstname: '',
-                surname: '',
+                name: '',
                 email: '',
-                phone: '',
-                content: ''
+                body: ''
             }
         }
     }
