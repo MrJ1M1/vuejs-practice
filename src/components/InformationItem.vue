@@ -5,7 +5,8 @@
             <p><b>Content: </b> {{comment.body}} </p>
             <p><b>{{comment.email}}</b></p>
         </div>
-        <div>
+        <div class="d-flex">
+            <my-button class="btn btn-secondary" @click="$router.push(`/comment/${comment.id}`)">Open</my-button>
             <my-button class="btn btn-danger" @click="$emit('remove', commit)">Delete</my-button>
         </div>
     </div>
